@@ -8,16 +8,17 @@ public class TypingTutor_Controller {
 
     TypingTutor_Controller(){
         initialize();
+
         type_duration = 0;
         wpm = 0; cps = 0;
     }
 
     String[] paragraphs = new String[15];
+
     String paragraph ;
     private char[] typedParagraph;
     public char[] characters;
-    int number_of_words;
-    int number_of_characters;
+
     float type_duration;
 
     //scores
@@ -27,15 +28,14 @@ public class TypingTutor_Controller {
 
 
     public void initialize(){
-       loadParagraphs();
+        loadParagraphs();
        //load a random paragraph
         Random random = new Random();
         int nextParagraph = random.nextInt(15);
 
         this.paragraph = paragraphs[nextParagraph];
         this.characters = this.paragraph.toCharArray();
-        this.number_of_words =  countWords();
-        this.number_of_characters = countCharacters();
+
     }
 
     //reads file en.paragraphs and loads all the paragraphs into the paragraphs array.
@@ -54,18 +54,6 @@ public class TypingTutor_Controller {
            e.printStackTrace();
        }
     }
-
-    private int countWords(){
-        //returns number of words in paragraph
-        String[] words = paragraph.split(" ");
-        return words.length+1;
-    }
-
-    private int countCharacters(){
-        //returns number of characters in paragraph
-        return characters.length+1 ;
-    }
-
     public void trackTypeDuration(long duration){
         //divide milliseconds by 1000 to get value in seconds
         this.type_duration = (float) (duration / 1000);

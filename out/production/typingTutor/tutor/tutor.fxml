@@ -13,7 +13,7 @@
     <VBox GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.rowSpan="1" GridPane.columnSpan="1"
           GridPane.halignment="LEFT">
         <VBox>
-            <Label text="The touch_type tutor"  style="-fx-font-weight: 800">
+            <Label text="The touch_type tutor"  style="-fx-font-weight: bolder ">
                 <font>
                     <Font name="Arial" size="18" />
                 </font>
@@ -25,18 +25,14 @@
                                                     -fx-font-family: Monospaced;
                                                     -fx-text-alignment: center;
                                                     -fx-text-fill: forestgreen;
-                                                    -fx-font-size: 15;
-
-
-                                                    ">
+                                                    -fx-font-size: 15;">
 
             </Label>
         </VBox>
         <VBox style="-fx-padding: 20px">
             <TextArea onKeyReleased="#handleKeyPressedAction" fx:id="input"  minWidth="600"  wrapText="true" style="
                                                                                                                                    -fx-font-family: 'DejaVu Sans Mono';
-
-                                                                                                                                   -fx-font-size: 15"
+                                                                                                                                    -fx-font-size: 15"
 
                       visible="false">
                 <font>

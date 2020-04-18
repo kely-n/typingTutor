@@ -23,6 +23,7 @@ public class TypingTutor extends Application {
     @FXML private TextArea input;
     int count = 0;int errors = 0;
     @FXML public void initialize(){
+
         if(Screen.getPrimary().getBounds().getWidth()>1200){
             paragraph.setStyle("-fx-font-family: Monospaced;-fx-text-alignment: center;-fx-text-fill: forestgreen;-fx-font-size: 20");
 
